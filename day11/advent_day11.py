@@ -71,7 +71,7 @@ class MyBoat:
     def steady_state(self):
         n=0
         while True:
-            print(f'Iteration {n}')
+            #print(f'Iteration {n}')
             arr = self.update_all()
             if np.all(self.arr == arr):
                 break
