@@ -34,7 +34,7 @@ def get_n_combinations(adapters):
 
     return nc[adapters[-1]]
 
-adapters = load_adapters('advent_day10_test.txt')
+adapters = load_adapters('advent_day10.txt')
 adapters.sort()
 adapters.append(adapters[-1] + 3)
 adapters.insert(0,0)
