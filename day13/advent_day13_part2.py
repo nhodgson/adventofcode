@@ -2,11 +2,28 @@
 I can't claim victory today as I had took far too many hints
 and sneak peaks!
 
+I looked here:
+https://en.wikipedia.org/wiki/Chinese_remainder_theorem
+
+and watched here:
+https://www.youtube.com/watch?v=ru7mWZJlRQg&t=334s
+
 buses = [(0, 13), (3, 41), (7, 37), (13, 659),
          (32, 19), (36, 23), (42, 29), (44, 409),
          (61, 17)]
 
 where each tuple is (offset, bus_id)
+
+we want a solution such that for all i
+    t = offset[i] % bus_id[i]
+
+e.g.
+    t = 3 (mod 41)
+    t = 7 (mod 37)
+    t = 13 (mod 659)
+    ...
+
+Solution
 
 find the first multiple of 13 that satisfies (t_0 + 3) % 41 == 0
 now you have t_0 = 325 and t_3 = 328
@@ -15,8 +32,7 @@ what other numbers satisfy this condition? Once you know that it's
 
 all t_0 += (13 * 41) * n for n=1,2,3...
 
-life gets easier!  (apparently it's all here 
-https://en.wikipedia.org/wiki/Chinese_remainder_theorem)
+life gets easier!  
 
 now move on
 
