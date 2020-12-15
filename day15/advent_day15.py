@@ -30,5 +30,6 @@ starting_numbers = [0,3,1,6,7,5]
 ans = play_game(starting_numbers, 2020)  
 print(f'Answer to part 1: {ans}')
 
+# maybe not the smartest, fastest
 ans = play_game(starting_numbers, 30000000)
 print(f'Answer to part 2: {ans}')
